@@ -1,0 +1,9 @@
+#mysql
+spring:
+  jpa:
+    datasource:
+      url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/appointment_db
+      username: root
+      password: mysql
+    hibernate:
+      ddl-auto: update

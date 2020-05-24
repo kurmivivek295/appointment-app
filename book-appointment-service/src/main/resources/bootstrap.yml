@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: book-appointment-service
+  config:
+    name: book-appointment-service
+  cloud:
+    config:
+      uri: ${spring.cloud.config.uri}
+---
+spring:
+  profiles: dev
+  cloud:
+    config:
+      enabled: true

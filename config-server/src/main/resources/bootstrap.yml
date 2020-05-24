@@ -4,16 +4,18 @@ spring:
   cloud:
     config:
       server:
-        git:
-          uri: <Git-Uri-To-Repo>
-          username: <Git-Username>
-          password: <Git-Password>
-          searchPaths: "*"
-        health:
-          enabled: false
+        native:
+          search-locations: classpath:/config-server
+  profiles:
+    include: native
+#        git:
+#          uri: https://github.com/kurmivivek295/spring-properties.git
+#          username:
+#          password:
+#          searchPaths: "*"
   security:
     basic:
       enabled: true
     user:
-      name: config_client
-      password: client123
+      name: config123
+      password: config123
